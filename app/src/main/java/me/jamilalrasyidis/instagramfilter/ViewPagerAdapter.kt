@@ -1,4 +1,4 @@
-package com.abcode.instagramfilter
+package me.jamilalrasyidis.instagramfilter
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager

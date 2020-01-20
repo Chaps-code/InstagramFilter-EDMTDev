@@ -1,4 +1,4 @@
-package com.abcode.instagramfilter.interfaces
+package me.jamilalrasyidis.instagramfilter.interfaces
 
 interface EditImageFragmentListener {
     fun onBrightnessChanged(brightness: Int)

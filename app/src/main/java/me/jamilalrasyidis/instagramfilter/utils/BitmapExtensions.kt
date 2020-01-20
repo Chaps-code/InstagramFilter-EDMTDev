@@ -1,4 +1,4 @@
-package com.abcode.instagramfilter.utils
+package me.jamilalrasyidis.instagramfilter.utils
 
 import android.content.ContentResolver
 import android.content.ContentUris
@@ -47,7 +47,14 @@ fun Bitmap?.insertImage(
                     )
 
                 @Suppress("DEPRECATION")
-                storeThumbnail(cr, miniThumb, id, 50f, 50f, MediaStore.Images.Thumbnails.MICRO_KIND)
+                (storeThumbnail(
+        cr,
+        miniThumb,
+        id,
+        50f,
+        50f,
+        MediaStore.Images.Thumbnails.MICRO_KIND
+    ))
             }
         } else {
             cr.delete(uri!!, null, null)

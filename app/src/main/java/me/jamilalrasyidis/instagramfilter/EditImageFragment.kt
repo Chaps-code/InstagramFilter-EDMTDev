@@ -1,4 +1,4 @@
-package com.abcode.instagramfilter
+package me.jamilalrasyidis.instagramfilter
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.SeekBar
 import androidx.fragment.app.Fragment
-import com.abcode.instagramfilter.interfaces.EditImageFragmentListener
+import me.jamilalrasyidis.instagramfilter.interfaces.EditImageFragmentListener
 
 class EditImageFragment : Fragment(), SeekBar.OnSeekBarChangeListener {
 

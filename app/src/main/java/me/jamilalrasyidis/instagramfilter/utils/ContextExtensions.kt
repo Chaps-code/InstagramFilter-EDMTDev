@@ -1,4 +1,4 @@
-package com.abcode.instagramfilter.utils
+package me.jamilalrasyidis.instagramfilter.utils
 
 import android.content.Context
 import android.content.res.Resources

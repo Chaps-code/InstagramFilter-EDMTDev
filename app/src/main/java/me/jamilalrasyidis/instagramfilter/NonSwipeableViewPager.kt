@@ -1,4 +1,4 @@
-package com.abcode.instagramfilter
+package me.jamilalrasyidis.instagramfilter
 
 import android.content.Context
 import android.util.AttributeSet
@@ -18,7 +18,11 @@ class NonSwipeableViewPager : ViewPager {
             val viewpager = ViewPager::class.java
             val scroller = viewpager.getDeclaredField("mScroller")
             scroller.isAccessible = true
-            scroller.set(this, MyScroller(context))
+            scroller.set(this,
+                MyScroller(
+                    context
+                )
+            )
         } catch (e: NoSuchFieldException) {
             e.printStackTrace()
         } catch (e: IllegalAccessException) {

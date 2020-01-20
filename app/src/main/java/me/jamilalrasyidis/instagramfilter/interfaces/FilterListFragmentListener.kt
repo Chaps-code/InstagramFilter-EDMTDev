@@ -1,4 +1,4 @@
-package com.abcode.instagramfilter.interfaces
+package me.jamilalrasyidis.instagramfilter.interfaces
 
 import com.zomato.photofilters.imageprocessors.Filter
 

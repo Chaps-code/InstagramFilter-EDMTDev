@@ -1,4 +1,4 @@
-package com.abcode.instagramfilter
+package me.jamilalrasyidis.instagramfilter
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -8,7 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
-import com.abcode.instagramfilter.interfaces.FilterListFragmentListener
+import me.jamilalrasyidis.instagramfilter.interfaces.FilterListFragmentListener
 import com.zomato.photofilters.utils.ThumbnailItem
 
 class FilterListAdapter : RecyclerView.Adapter<FilterListAdapter.ViewHolder>() {

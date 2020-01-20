@@ -1,4 +1,4 @@
-package com.abcode.instagramfilter
+package com.jamilalrasyidis.instagramfilter
 
 import org.junit.Test
 

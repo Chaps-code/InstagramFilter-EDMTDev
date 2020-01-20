@@ -1,4 +1,4 @@
-package com.abcode.instagramfilter
+package me.jamilalrasyidis.instagramfilter
 
 import android.Manifest
 import android.app.Activity
@@ -14,11 +14,11 @@ import android.widget.ImageView
 import android.widget.Toast
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.viewpager.widget.ViewPager
-import com.abcode.instagramfilter.interfaces.EditImageFragmentListener
-import com.abcode.instagramfilter.interfaces.FilterListFragmentListener
-import com.abcode.instagramfilter.utils.insertImage
-import com.abcode.instagramfilter.utils.loadBitmapFromAsset
-import com.abcode.instagramfilter.utils.loadBitmapFromGallery
+import me.jamilalrasyidis.instagramfilter.interfaces.EditImageFragmentListener
+import me.jamilalrasyidis.instagramfilter.interfaces.FilterListFragmentListener
+import me.jamilalrasyidis.instagramfilter.utils.insertImage
+import me.jamilalrasyidis.instagramfilter.utils.loadBitmapFromAsset
+import me.jamilalrasyidis.instagramfilter.utils.loadBitmapFromGallery
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.tabs.TabLayout
@@ -33,7 +33,9 @@ import com.zomato.photofilters.imageprocessors.subfilters.ContrastSubFilter
 import com.zomato.photofilters.imageprocessors.subfilters.SaturationSubfilter
 import java.io.IOException
 
-class MainActivity : AppCompatActivity(), FilterListFragmentListener, EditImageFragmentListener {
+class MainActivity : AppCompatActivity(),
+    FilterListFragmentListener,
+    EditImageFragmentListener {
 
     companion object {
         const val IMAGE_FILENAME = "viloid.jpg"
@@ -87,12 +89,16 @@ class MainActivity : AppCompatActivity(), FilterListFragmentListener, EditImageF
     }
 
     private fun setupViewPager(viewPager: ViewPager?) {
-        val adapter = ViewPagerAdapter(supportFragmentManager)
+        val adapter = ViewPagerAdapter(
+            supportFragmentManager
+        )
 
-        filterListFragment = FilterListFragment()
+        filterListFragment =
+            FilterListFragment()
         filterListFragment?.setListener(this)
 
-        editImageFragment = EditImageFragment()
+        editImageFragment =
+            EditImageFragment()
         editImageFragment?.setListener(this)
 
         adapter.fragments.add(filterListFragment!!)
@@ -209,7 +215,9 @@ class MainActivity : AppCompatActivity(), FilterListFragmentListener, EditImageF
                     if (report?.areAllPermissionsGranted()!!) {
                         val intent = Intent(Intent.ACTION_PICK)
                         intent.type = "image/*"
-                        startActivityForResult(intent, PERMISSION_PICK_IMAGE)
+                        startActivityForResult(intent,
+                            PERMISSION_PICK_IMAGE
+                        )
                     } else {
                         Toast.makeText(this@MainActivity, "Permission Denied!", Toast.LENGTH_SHORT)
                             .show()

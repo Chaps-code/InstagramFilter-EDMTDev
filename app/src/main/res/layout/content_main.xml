@@ -7,7 +7,7 @@
     android:background="@android:color/white"
     android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".MainActivity"
+    tools:context="me.jamilalrasyidis.instagramfilter.MainActivity"
     tools:showIn="@layout/activity_main">
 
     <ImageView
@@ -17,7 +17,7 @@
         android:scaleType="centerCrop"
         tools:ignore="ContentDescription" />
 
-    <com.abcode.instagramfilter.NonSwipeableViewPager
+    <me.jamilalrasyidis.instagramfilter.NonSwipeableViewPager
         android:id="@+id/view_pager"
         android:layout_width="match_parent"
         android:layout_height="120dp"

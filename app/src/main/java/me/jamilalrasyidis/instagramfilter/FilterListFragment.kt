@@ -1,4 +1,4 @@
-package com.abcode.instagramfilter
+package me.jamilalrasyidis.instagramfilter
 
 import android.graphics.Bitmap
 import android.os.Bundle
@@ -10,15 +10,16 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.abcode.instagramfilter.interfaces.FilterListFragmentListener
-import com.abcode.instagramfilter.utils.addSpaceItem
-import com.abcode.instagramfilter.utils.loadBitmapFromAsset
+import me.jamilalrasyidis.instagramfilter.interfaces.FilterListFragmentListener
+import me.jamilalrasyidis.instagramfilter.utils.addSpaceItem
+import me.jamilalrasyidis.instagramfilter.utils.loadBitmapFromAsset
 import com.zomato.photofilters.FilterPack
 import com.zomato.photofilters.imageprocessors.Filter
 import com.zomato.photofilters.utils.ThumbnailItem
 import com.zomato.photofilters.utils.ThumbnailsManager
 
-class FilterListFragment : Fragment(), FilterListFragmentListener {
+class FilterListFragment : Fragment(),
+    FilterListFragmentListener {
 
     private var listener: FilterListFragmentListener? = null
     private lateinit var recyclerView: RecyclerView
